@@ -3,16 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { KeysPipe } from './pipes/keyspipe.pipe';
-
+import { CarouselItemDirective } from './directivas/carousel-item.directive';
+import { CarouselItemElementDirective } from './directivas/carousel-item-element.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
-    KeysPipe
+    CarouselItemDirective,
+    CarouselItemElementDirective,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

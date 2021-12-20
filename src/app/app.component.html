@@ -49,15 +49,17 @@
           Empecé en el mundo del desarrollo cuando comencé mi tecnicatura en la
           UTN hace dos años y desde entonces me entusiasma y me motiva saber
           todos los días un poco más, contar todos los días con más
-          herramientas. He tenido experiencia de trabajo real haciendo páginas
-          web como freelancer (donde he aprendido optimización, buenas
-          prácticas, SEO y posicionamiento según google) y experiencia en
-          equipos haciendo proyectos de la facultad y cursos, que hago para
-          profundizar mis conocimientos. Considero que al igual que desarrollar;
-          comunicar, escuchar y trabajar en equipo son habilidades que se
-          entrenan a diario y eso me encanta. Estoy muy contento de formar parte
-          del mundo IT y espero con ansias poder colaborar con todo lo que
-          aprendí este tiempo y seguir aprendiendo a diario!.
+          herramientas. <br />
+          He tenido experiencia de trabajo real haciendo páginas web como
+          freelancer (donde he aprendido optimización, buenas prácticas, SEO y
+          posicionamiento según google) y experiencia en equipos haciendo
+          proyectos de la facultad y cursos, que hago para profundizar mis
+          conocimientos. <br />
+          Considero que al igual que desarrollar; comunicar, escuchar y trabajar
+          en equipo son habilidades que se entrenan a diario y eso me encanta.
+          Estoy muy contento de formar parte del mundo IT y espero con ansias
+          poder colaborar con todo lo que aprendí este tiempo y seguir
+          aprendiendo a diario!.
         </p>
         <div class="about__buttons">
           <div class="about__btns">
@@ -72,46 +74,140 @@
 <span id="skills"></span>
 <section class="skills">
   <div class="max-width">
-    <div class="skills__list">
-      <ul>
-        <li><a href="" class="active">Skills</a></li>
-        <li><a href="">Experience</a></li>
-        <li><a href="">Education</a></li>
-      </ul>
-    </div>
-    <div class="skills__content">
-      <div class="skills__content-section">
-        <div class="skills__content-list-item">
-          <div class="skills__content-list-item-options">
-            <img src="../assets/icons/arrow.svg" alt="arrow" height="30px" width="30px">
-            <h3>Frontend</h3>
-            <img src="../assets/icons/arrow.svg" alt="arrow" height="30px" width="30px" style="transform: rotate(180deg); ">
+    <div class="skills__carrousel">
+      <div class="skills__list">
+        <ul>
+          <li
+            #listItem
+            class="list__el"
+            *ngFor="let item of skillsList; index as i"
+          >
+            <a (click)="unsetAllOptions(i)" href="javascript:void(0)">{{
+              item
+            }}</a>
+          </li>
+        </ul>
+      </div>
+      <div #skillContent class="skills__content">
+        <div class="myskills__carousel">
+          <div class="skills__content-list-item-rows">
+            <a href="javascript:void(0)" (click)="prev()">
+              <img
+                src="../assets/icons/arrow.svg"
+                alt="arrow"
+                height="30px"
+                width="30px"
+              />
+            </a>
+            <a href="javascript:void(0)" (click)="next()">
+              <img
+                src="../assets/icons/arrow.svg"
+                alt="arrow"
+                height="30px"
+                width="30px"
+                class="next"
+                role="button"
+              />
+            </a>
           </div>
-          <div class="skills__content-list-item-content">
-            <ul>
-              <li>
-                <div class="skills__content-list-item-content-item">
-                  <img src="" alt="html">
+          <div #myskillContent class="myskills__carousel-big carousel-item">
+            <section #myskillSections class="skills__content-section1">
+              <div class="skills__content-list-item">
+                <div class="skills__content-list-item-options">
+                  <h3>Frontend</h3>
+                  <div class="skills__content-list-item-content">
+                    <ul>
+                      <li>
+                        <div class="skills__content-list-item-content-item">
+                          <img src="" alt="uwuww" />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skills__content-list-item-content-item">
+                          <img src="" alt="uwuwwwwwww" />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skills__content-list-item-content-item">
+                          <img src="" alt="uwuuu" />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skills__content-list-item-content-item">
+                          <img src="" alt="uwuuu" />
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </li>
-              <li>
-                <div class="skills__content-list-item-content-item">
-                  <img src="" alt="css">
+              </div>
+            </section>
+            <section #myskillSections class="skills__content-section1">
+              <div class="skills__content-list-item">
+                <div class="skills__content-list-item-options">
+                  <h3>Backend</h3>
+                  <div class="skills__content-list-item-content">
+                    <ul>
+                      <li>
+                        <div class="skills__content-list-item-content-item">
+                          <img src="" alt="uwuww" />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skills__content-list-item-content-item">
+                          <img src="" alt="uwuwwwwwww" />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skills__content-list-item-content-item">
+                          <img src="" alt="uwuuu" />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skills__content-list-item-content-item">
+                          <img src="" alt="uwuuu" />
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </li>
-              <li>
-                <div class="skills__content-list-item-content-item">
-                 <img src="" alt="javascript">
+              </div>
+            </section>
+            <section #myskillSections class="skills__content-section1">
+              <div class="skills__content-list-item">
+                <div class="skills__content-list-item-options">
+                  <h3>OtherSkills</h3>
+                  <div class="skills__content-list-item-content">
+                    <ul>
+                      <li>
+                        <div class="skills__content-list-item-content-item">
+                          <img src="" alt="aaaaaaaaaaa" />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skills__content-list-item-content-item">
+                          <img src="" alt="aaaaaaaa" />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skills__content-list-item-content-item">
+                          <img src="" alt="aaaaaaaa" />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skills__content-list-item-content-item">
+                          <img src="" alt="aaaaaaa" />
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </li>
-              <li>
-                <div class="skills__content-list-item-content-item">
-                  <img src="" alt="typescript">
-                </div>
-              </li>
-            </ul>
+              </div>
+            </section>
           </div>
         </div>
+        <section class="skills__content-section"></section>
+        <section class="skills__content-section"></section>
       </div>
     </div>
   </div>
