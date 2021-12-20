@@ -1,15 +1,7 @@
-import {
-  animate,
-  AnimationBuilder,
-  AnimationFactory,
-  AnimationPlayer,
-  style,
-} from '@angular/animations';
+import { ViewportScroller } from '@angular/common';
 import {
   Component,
   ElementRef,
-  HostListener,
-  Input,
   QueryList,
   Renderer2,
   ViewChild,
@@ -42,31 +34,41 @@ export class AppComponent {
   @ViewChildren('asList')
   public list!: QueryList<ElementRef>;
 
-  items = [{ title: 'Front-end' }, { title: 'Back-end' }, { title: 'Other-skills' }];
+  items = [
+    { title: 'Front-end' },
+    { title: 'Back-end' },
+    { title: 'Other-skills' },
+  ];
 
-
-  constructor(private render2: Renderer2, private builder: AnimationBuilder) {}
+  constructor(private render2: Renderer2, private viewportScroller:ViewportScroller) {}
 
   ngAfterViewInit() {
     this.list.toArray()[0].nativeElement.classList.add('active');
     this.listItem.toArray()[0].nativeElement.classList.add('active');
   }
 
-  change(i: number) {
+  change(i: number,key:string) {
     const elementList = this.list.toArray()[i].nativeElement;
     this.list.forEach((element) => {
       this.render2.removeClass(element.nativeElement, 'active');
     });
     this.render2.addClass(elementList, 'active');
-    if(i === 0){
-      document.getElementById('home')!.scrollIntoView({behavior: 'smooth'});
+    if (key === 'home') {
+      this.viewportScroller.scrollToAnchor(key);
     }
-    if(i === 1){
-      this.unsetAllOptions(i);
+    if(key === 'about'){
+      this.viewportScroller.scrollToAnchor(key);
     }
-    if(i === 2){
-      this.unsetAllOptions(i);
+    if(key === 'skills'){
+      this.viewportScroller.scrollToAnchor(key);
     }
+    if(key === 'projects'){
+      this.viewportScroller.scrollToAnchor(key);
+    }
+    if(key === 'contact'){
+      this.viewportScroller.scrollToAnchor(key);
+    }
+
   }
   unsetAllOptions(i: number) {
     const skillList = this.listItem.toArray()[i].nativeElement;

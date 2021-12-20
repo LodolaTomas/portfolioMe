@@ -9,7 +9,7 @@
     <div class="nav__list">
       <ul>
         <li *ngFor="let key of objectKeys(navlist); index as i">
-          <a #asList (click)="change(i)" href="#{{ key }}">{{
+          <a #asList (click)="change(i,key)" href="#{{ key }}">{{
             navlist[key]
           }}</a>
         </li>
@@ -79,7 +79,7 @@
             class="list__el"
             *ngFor="let item of skillsList; index as i"
           >
-            <a (click)="unsetAllOptions(i)" href="javascript:void(0)">{{
+            <a  (click)="unsetAllOptions(i)" href="javascript:void(0)">{{
               item
             }}</a>
           </li>
