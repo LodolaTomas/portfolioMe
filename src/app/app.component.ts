@@ -42,7 +42,9 @@ export class AppComponent {
   @ViewChildren('asList')
   public list!: QueryList<ElementRef>;
 
-  @ViewChildren('myskillSections')
+  items = [{ title: 'Front-end' }, { title: 'Back-end' }, { title: 'Other-skills' }];
+
+  /* @ViewChildren('myskillSections')
   public myskillSections!: QueryList<ElementRef<HTMLElement>>;
 
   @ViewChild('myskillContent') private carousel!: ElementRef;
@@ -51,14 +53,14 @@ export class AppComponent {
   private player!: AnimationPlayer;
   private itemWidth!: number;
   private currentSlide = 0;
-  carouselWrapperStyle = {};
+  carouselWrapperStyle = {}; */
 
   constructor(private render2: Renderer2, private builder: AnimationBuilder) {}
 
   ngAfterViewInit() {
     this.list.toArray()[0].nativeElement.classList.add('active');
     this.listItem.toArray()[0].nativeElement.classList.add('active');
-    this.reSizeCarousel();
+    /* this.reSizeCarousel(); */
   }
 
   change(i: number) {
@@ -84,75 +86,80 @@ export class AppComponent {
     );
   }
 
-  prev() {
-    if (this.currentSlide == 0) {
-      let arr: any = this.myskillSections.toArray();
-      let last = arr.pop();
-      arr = [last].concat(arr);
-      this.myskillSections.reset(arr);
-      this.currentSlide++;
-      this.transitionCarousel(0);
-    }
-    this.currentSlide = (this.currentSlide - 1 + parseInt(this.myskillSections.toArray().length.toString())) % parseInt(this.myskillSections.toArray().length.toString());
-    this.transitionCarousel(null);
-  }
+  // prev() {
+  //   if (this.currentSlide == 0) {
+  //     let arr: Array<any> = this.myskillSections.toArray();
+  //     let one = arr[0];
+  //     let two = arr[1];
+  //     let three = arr[2];
+  //     let last :Array<any> = arr.sort();
+  //     /* this.myskillSections.reset(last); */
+  //     console.log(arr);
+  //     console.log(this.myskillSections.toArray());
+  //     this.myskillSections.reset(arr);
+  //     this.currentSlide++;
+  //     this.transitionCarousel(0);
+  //   }
+  //   this.currentSlide = (this.currentSlide - 1 + parseInt(this.myskillSections.toArray().length.toString())) % parseInt(this.myskillSections.toArray().length.toString());
+  //   this.transitionCarousel(null);
+  // }
 
-  next() {
-    if (this.currentSlide + 1 == this.myskillSections.toArray().length) {
-      let arr = this.myskillSections.toArray();
-      let first: any = arr.shift();
-      arr = arr.concat([first]);
-      this.myskillSections.reset(arr);
-      this.currentSlide--;
-      this.transitionCarousel(0);
-    }
-    this.currentSlide = (this.currentSlide + 1 + parseInt(this.myskillSections.toArray().length.toString())) % parseInt(this.myskillSections.toArray().length.toString());
-    this.transitionCarousel(null);
-  }
+  // next() {
+  //   if (this.currentSlide + 1 == this.myskillSections.toArray().length) {
+  //     let arr = this.myskillSections.toArray();
+  //     let first: any = arr.shift();
+  //     arr = arr.concat([first]);
+  //     this.myskillSections.reset(arr);
+  //     this.currentSlide--;
+  //     this.transitionCarousel(0);
+  //   }
+  //   this.currentSlide = (this.currentSlide + 1) % parseInt(this.myskillSections.toArray().length.toString());
+  //   this.transitionCarousel(null);
+  // }
 
-  private buildAnimation(offset: any, time: any) {
-    return this.builder.build([
-      animate(
-        time == null ? this.timing : 0,
-        style({ transform: `translateY(-${offset}px)` })
-      ),
-    ]);
-  }
+  // private buildAnimation(offset: any, time: any) {
+  //   return this.builder.build([
+  //     animate(
+  //       time == null ? this.timing : 0,
+  //       style({ transform: `translateY(-${offset}px)` })
+  //     ),
+  //   ]);
+  // }
 
-  /**
-   * Animates the carousel to the currently selected slide.
-   *
-   * **You must set `this.currentSlide` before calling this method, or it will have no effect.**
-   */
-  transitionCarousel(time: any) {
-    const offset = this.currentSlide * this.itemWidth;
-    const myAnimation: AnimationFactory = this.buildAnimation(offset, time);
-    this.player = myAnimation.create(this.carousel.nativeElement);
-    this.player.play();
-  }
+  // /**
+  //  * Animates the carousel to the currently selected slide.
+  //  *
+  //  * **You must set `this.currentSlide` before calling this method, or it will have no effect.**
+  //  */
+  // transitionCarousel(time: any) {
+  //   const offset = this.currentSlide * this.itemWidth;
+  //   const myAnimation: AnimationFactory = this.buildAnimation(offset, time);
+  //   this.player = myAnimation.create(this.carousel.nativeElement);
+  //   this.player.play();
+  // }
 
-  /**
-   * Listens for changes to the viewport size and triggers a re-sizing of the carousel.
-   */
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.reSizeCarousel();
-  }
+  // /**
+  //  * Listens for changes to the viewport size and triggers a re-sizing of the carousel.
+  //  */
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event: any) {
+  //   this.reSizeCarousel();
+  // }
 
-  /**
-   * Re-sizes the carousel container and triggers `this.transitionCarousel()` to reset the childrens' positions.
-   *
-   * For use on initial load, and when changing viewport size.
-   */
-  reSizeCarousel(): void {
-    // re-size the container
-    this.itemWidth =
-      this.myskillSections.first.nativeElement.getBoundingClientRect().height;
-    this.carouselWrapperStyle = {
-      height: `${this.itemWidth}px`,
-    };
+  // /**
+  //  * Re-sizes the carousel container and triggers `this.transitionCarousel()` to reset the childrens' positions.
+  //  *
+  //  * For use on initial load, and when changing viewport size.
+  //  */
+  // reSizeCarousel(): void {
+  //   // re-size the container
+  //   this.itemWidth =
+  //     this.myskillSections.first.nativeElement.getBoundingClientRect().height;
+  //   this.carouselWrapperStyle = {
+  //     height: `${this.itemWidth}px`,
+  //   };
 
-    // trigger a fresh transition to the current slide to reset the position of the children
-    this.transitionCarousel(null);
-  }
+  //   // trigger a fresh transition to the current slide to reset the position of the children
+  //   this.transitionCarousel(null);
+  // }
 }
