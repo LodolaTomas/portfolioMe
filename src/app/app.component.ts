@@ -35,7 +35,7 @@ export class AppComponent {
   public list!: QueryList<ElementRef>;
 
   items = [
-    { title: 'Front-end' },
+    { title: 'Front-end', html: '../assets/images/html_logo.png', css: '../assets/images/css_logo.png', js: '../assets/images/js_logo.png', typescript: '../assets/images/ts_logo.png', angular:  '../assets/images/angular_logo.png' },
     { title: 'Back-end' },
     { title: 'Other-skills' },
   ];

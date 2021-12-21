@@ -272,8 +272,7 @@ section .title::after {
   transform: translateX(-50%);
 }
 
-.about {
-  height: 100vh;
+.about {  
   .about-content {
     display: flex;
     flex-wrap: wrap;
@@ -401,6 +400,8 @@ section .title::after {
         margin: 30px 0 30px 0;
         font-family: $font-family-Regular;
         font-size: $h2-font-size;
+        width: 15%;
+        white-space: nowrap;
       }
     }
     .skills__content-list-item-content {
@@ -408,10 +409,21 @@ section .title::after {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 80%;
+      height: 500px;
       h3 {
         margin: 30px 0 30px 0;
         font-family: $font-family-Regular;
         font-size: $h2-font-size;
+      }
+      ul{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
       }
     }
   }
@@ -443,4 +455,17 @@ section .title::after {
   justify-content: space-between;
   align-items: center;
   align-content: space-between;
+}
+
+.image{
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 40px;
+  filter: grayscale(1);
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    filter: grayscale(0);
+  }
 }

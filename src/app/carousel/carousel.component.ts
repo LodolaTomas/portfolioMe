@@ -39,7 +39,7 @@ export class CarouselComponent implements AfterViewInit {
   @Input() timing = '0.5s ease-in-out';
   @Input() showControls = true;
   private player!: AnimationPlayer;
-  private itemWidth!: number;
+  private itemHeight!: number;
   private currentSlide = 0;
   carouselWrapperStyle = {};
 
@@ -90,13 +90,13 @@ export class CarouselComponent implements AfterViewInit {
     this.reSizeCarousel();
   }
 
-  /**
-   * Listens for changes to the viewport size and triggers a re-sizing of the carousel.
-   */
-  @HostListener('window:resize', ['$event'])
-  onResize(event:any) {
-    this.reSizeCarousel();
-  }
+  // /**
+  //  * Listens for changes to the viewport size and triggers a re-sizing of the carousel.
+  //  */
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event:any) {
+  //   this.reSizeCarousel();
+  // }
 
   /**
    * Re-sizes the carousel container and triggers `this.transitionCarousel()` to reset the childrens' positions.
@@ -105,9 +105,9 @@ export class CarouselComponent implements AfterViewInit {
    */
   reSizeCarousel(): void {
     // re-size the container
-    this.itemWidth = this.itemsElements.first.nativeElement.getBoundingClientRect().height;
+    this.itemHeight = this.itemsElements.first.nativeElement.getBoundingClientRect().height;
     this.carouselWrapperStyle = {
-      height: `${this.itemWidth}px`,
+      height: `${this.itemHeight}px`,
     };
 
     // trigger a fresh transition to the current slide to reset the position of the children
