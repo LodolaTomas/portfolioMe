@@ -172,6 +172,7 @@ a {
   justify-content: center;
   top: 0;
   left: 0;
+  z-index: 1000;
 }
 
 nav {
@@ -598,7 +599,7 @@ section .title::after {
 }
 
 .contact__label {
-  font-family: $font-family-Light;
+  font-family: $font-family-Regular;
   font-size: $h3-font-size;
   color: $background-color;
 }
