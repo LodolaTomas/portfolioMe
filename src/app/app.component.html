@@ -95,30 +95,95 @@
                     <div class="skills__content-list-item-options">
                       <h3>{{item.title}}</h3>
                       <div class="skills__content-list-item-content">
-                        <ul>
+                        <ul *ngIf='item.title === "Other-skills"' class="one-skills">
                           <li>
                             <div class="skills__content-list-item-content-item">
+                              <img [src]="item.bootstrap" alt="bootstrap logo" class="image" />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="skills__content-list-item-content-item">
+                              <img [src]="item.docker" alt="docker logo" class="image" />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="skills__content-list-item-content-item">
+                              <img [src]="item.git" alt="git logo" class="image" />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="skills__content-list-item-content-item">
+                              <img [src]="item.ionic" alt="ionic logo" class="image" />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="skills__content-list-item-content-item">
+                              <img [src]="item.linux" alt="linux logo" class="image" />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="skills__content-list-item-content-item">
+                              <img [src]="item.ngrx" alt="ngrx logo" class="image" />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="skills__content-list-item-content-item">
+                              <img [src]="item.sass" alt="sass logo" class="image" />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="skills__content-list-item-content-item">
+                              <img [src]="item.adobexd" alt="adobexd logo" class="image" />
+                            </div>
+                          </li>
+                        </ul>
+                        <ul *ngIf='item.title === "Front-end" || item.title === "Back-end"' class="two-skills">
+                          <li>
+                            <div class="skills__content-list-item-content-item" *ngIf='item.title === "Front-end"'>
                               <img [src]="item.html" alt="html logo" class="image" />
                             </div>
+                            <div class="skills__content-list-item-content-item" *ngIf='item.title === "Back-end"'>
+                              <img [src]="item.php" alt="php logo" class="image" />
+                            </div>
                           </li>
                           <li>
-                            <div class="skills__content-list-item-content-item">
+                            <div class="skills__content-list-item-content-item" *ngIf='item.title === "Front-end"'>
                               <img [src]="item.css" alt="css logo" class="image" />
                             </div>
+                            <div class="skills__content-list-item-content-item" *ngIf='item.title === "Back-end"'>
+                              <img [src]="item.laravel" alt="laravel logo" class="image" />
+                            </div>
                           </li>
                           <li>
-                            <div class="skills__content-list-item-content-item">
+                            <div class="skills__content-list-item-content-item" *ngIf='item.title === "Front-end"'>
                               <img [src]="item.js" alt="js logo" class="image" />
                             </div>
-                          </li>
-                          <li>
-                            <div class="skills__content-list-item-content-item">
-                              <img [src]="item.typescript" alt="typescript logo" class="image" />
+                            <div class="skills__content-list-item-content-item" *ngIf='item.title === "Back-end"'>
+                              <img [src]="item.python" alt="python logo" class="image" />
                             </div>
                           </li>
                           <li>
-                            <div class="skills__content-list-item-content-item">
+                            <div class="skills__content-list-item-content-item" *ngIf='item.title === "Front-end"'>
+                              <img [src]="item.typescript" alt="typescript logo" class="image" />
+                            </div>
+                            <div class="skills__content-list-item-content-item" *ngIf='item.title === "Back-end"'>
+                              <img [src]="item.mysql" alt="mysql logo" class="image" />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="skills__content-list-item-content-item" *ngIf='item.title === "Front-end"'>
                               <img [src]="item.angular" alt="angular logo" class="image" />
+                            </div>
+                            <div class="skills__content-list-item-content-item" *ngIf='item.title === "Back-end"'>
+                              <img [src]="item.firebase" alt="firebase logo" class="image" />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="skills__content-list-item-content-item" *ngIf='item.title === "Front-end"'>
+                              <img [src]="item.vue" alt="vue logo" class="image" />
+                            </div>
+                            <div class="skills__content-list-item-content-item" *ngIf='item.title === "Back-end"'>
+                              <img [src]="item.node" alt="node logo" class="image" />
                             </div>
                           </li>
                         </ul>

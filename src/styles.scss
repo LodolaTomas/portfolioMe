@@ -405,10 +405,6 @@ section .title::after {
       }
     }
     .skills__content-list-item-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       width: 80%;
       height: 500px;
       h3 {
@@ -418,12 +414,18 @@ section .title::after {
       }
       ul{
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
         width: 100%;
         align-content: center;
         justify-content: center;
+      }
+      .two-skills{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .one-skills{
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
       }
     }
   }
@@ -461,10 +463,11 @@ section .title::after {
   display: inline-block;
   width: 150px;
   height: 150px;
-  object-fit: cover;
+  object-fit: contain;
   margin: 40px;
   filter: grayscale(1);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
   &:hover {
     filter: grayscale(0);
   }
