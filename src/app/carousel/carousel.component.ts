@@ -28,7 +28,7 @@ import { CarouselItemElementDirective } from '../directivas/carousel-item-elemen
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
 })
-export class CarouselComponent implements AfterViewInit {
+export class CarouselComponent {
   @ContentChildren(CarouselItemDirective)
   items!: QueryList<CarouselItemDirective>;
 
@@ -86,9 +86,9 @@ export class CarouselComponent implements AfterViewInit {
     this.transitionCarousel(null);
   }
 
-  ngAfterViewInit() {
+  /* ngAfterViewInit() {
     this.reSizeCarousel();
-  }
+  } */
 
   // /**
   //  * Listens for changes to the viewport size and triggers a re-sizing of the carousel.

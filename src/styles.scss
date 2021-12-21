@@ -420,11 +420,9 @@ section .title::after {
         justify-content: center;
       }
       .two-skills{
-        grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
       }
       .one-skills{
-        grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
     }
