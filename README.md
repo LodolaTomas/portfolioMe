@@ -3,7 +3,7 @@
 *voz de gaspi* BUENASSSS 
 les dejo aca mi portfolio y fotos del disenio ;)
 
-hasta ahora tengo estas imagenes q se ven, Mobile comming soon!
+hasta ahora tengo estas imagenes q se ven, Mobile coming soon!
 
 ![image](https://user-images.githubusercontent.com/52363833/146662577-70151db8-a83f-45bb-985d-16d8f5a4d98d.png)
 ## nose si esta bien traducido, cualquier ayuda de valora y se agradece <3 
