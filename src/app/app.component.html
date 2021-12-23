@@ -1,37 +1,5 @@
-<header class="header">
-  <nav class="nav container">
-    <div class="nav__logo">
-      <h2>
-        Portfo
-        <p class="nav_logo_color">lio.</p>
-      </h2>
-    </div>
-    <div class="nav__list">
-      <ul>
-        <li *ngFor="let key of objectKeys(navlist); index as i">
-          <a #asList (click)="change(i, key)" href="#{{ key }}">{{
-            navlist[key]
-          }}</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
-<section class="home" id="home">
-  <div class="max-width">
-    <div class="home-content">
-      <div class="text-1">Hello, my name is</div>
-      <div class="text-2">Lodola Tomás</div>
-      <div class="text-3">
-        And I'm a <span class="typing">Full Stack Developer</span>
-      </div>
-      <div class="home__btns">
-        <a href="#" class="button2">Hire me</a>
-        <a href="#" class="button1">Get Resume</a>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- 
+
 <section class="about" id="about">
   <div class="max-width">
     <h2 class="title">About me</h2>
@@ -57,23 +25,7 @@
           collaborate with everything I learned this time and keep learning
           every day.
         </p>
-        <!-- 
-          <p>
-          Empecé en el mundo del desarrollo cuando comencé mi tecnicatura en la
-          UTN hace dos años y desde entonces me entusiasma y me motiva saber
-          todos los días un poco más, contar todos los días con más
-          herramientas. <br />
-          He tenido experiencia de trabajo real haciendo páginas web como
-          freelancer (donde he aprendido optimización, buenas prácticas, SEO y
-          posicionamiento según google) y experiencia en equipos haciendo
-          proyectos de la facultad y cursos, que hago para profundizar mis
-          conocimientos. <br />
-          Considero que al igual que desarrollar; comunicar, escuchar y trabajar
-          en equipo son habilidades que se entrenan a diario y eso me encanta.
-          Estoy muy contento de formar parte del mundo IT y espero con ansias
-          poder colaborar con todo lo que aprendí este tiempo y seguir
-          aprendiendo a diario!.
-        </p>-->
+        
         <div class="about__buttons">
           <div class="about__btns">
             <a href="#" class="button2">Hire me</a>
@@ -525,5 +477,26 @@
       </form>
     </div>
   </div>
-</section>
+</section> -->
+<app-header></app-header>
+<app-home></app-home>
+<app-about></app-about>
+<app-skills></app-skills>
 <router-outlet></router-outlet>
+<!-- 
+          <p>
+          Empecé en el mundo del desarrollo cuando comencé mi tecnicatura en la
+          UTN hace dos años y desde entonces me entusiasma y me motiva saber
+          todos los días un poco más, contar todos los días con más
+          herramientas. <br />
+          He tenido experiencia de trabajo real haciendo páginas web como
+          freelancer (donde he aprendido optimización, buenas prácticas, SEO y
+          posicionamiento según google) y experiencia en equipos haciendo
+          proyectos de la facultad y cursos, que hago para profundizar mis
+          conocimientos. <br />
+          Considero que al igual que desarrollar; comunicar, escuchar y trabajar
+          en equipo son habilidades que se entrenan a diario y eso me encanta.
+          Estoy muy contento de formar parte del mundo IT y espero con ansias
+          poder colaborar con todo lo que aprendí este tiempo y seguir
+          aprendiendo a diario!.
+        </p>-->

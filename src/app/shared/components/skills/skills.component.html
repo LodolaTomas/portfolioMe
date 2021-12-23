@@ -1,0 +1,347 @@
+<section class="skills container" id="skills">
+      <div class="skills__carrousel">
+        <div class="skills__list">
+          <ul>
+            <li
+              
+              class="list__el"
+              *ngFor="let item of skillsList; index as i"
+            >
+              <a #listItem (click)="unsetAllOptions(i)" href="javascript:void(0)">{{
+                item
+              }}</a>
+            </li>
+          </ul>
+        </div>
+        <div #skillContent class="skills__content">
+          <section class="myskills__carousel">
+            <carousel class="myskills__carousel-big carousel-item">
+              <ng-container *ngFor="let item of items">
+                <ng-container *carouselItem>
+                  <section #myskillSections class="skills__content-section1">
+                    <div class="skills__content-list-item">
+                      <div class="skills__content-list-item-options">
+                        <h3>{{ item.title }}</h3>
+                        <div class="skills__content-list-item-content">
+                          <ul
+                            *ngIf="item.title === 'Other-skills'"
+                            class="one-skills"
+                          >
+                            <li>
+                              <div class="skills__content-list-item-content-item">
+                                <img
+                                  [src]="item.bootstrap"
+                                  alt="bootstrap logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                            <li>
+                              <div class="skills__content-list-item-content-item">
+                                <img
+                                  [src]="item.docker"
+                                  alt="docker logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                            <li>
+                              <div class="skills__content-list-item-content-item">
+                                <img
+                                  [src]="item.git"
+                                  alt="git logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                            <li>
+                              <div class="skills__content-list-item-content-item">
+                                <img
+                                  [src]="item.ionic"
+                                  alt="ionic logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                            <li>
+                              <div class="skills__content-list-item-content-item">
+                                <img
+                                  [src]="item.linux"
+                                  alt="linux logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                            <li>
+                              <div class="skills__content-list-item-content-item">
+                                <img
+                                  [src]="item.ngrx"
+                                  alt="ngrx logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                            <li>
+                              <div class="skills__content-list-item-content-item">
+                                <img
+                                  [src]="item.sass"
+                                  alt="sass logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                            <li>
+                              <div class="skills__content-list-item-content-item">
+                                <img
+                                  [src]="item.adobexd"
+                                  alt="adobexd logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                          </ul>
+                          <ul
+                            *ngIf="
+                              item.title === 'Front-end' ||
+                              item.title === 'Back-end'
+                            "
+                            class="two-skills"
+                          >
+                            <li>
+                              <div
+                                class="skills__content-list-item-content-item"
+                                *ngIf="item.title === 'Front-end'"
+                              >
+                                <img
+                                  [src]="item.html"
+                                  alt="html logo"
+                                  class="image"
+                                />
+                              </div>
+                              <div
+                                class="skills__content-list-item-content-item"
+                                *ngIf="item.title === 'Back-end'"
+                              >
+                                <img
+                                  [src]="item.php"
+                                  alt="php logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                            <li>
+                              <div
+                                class="skills__content-list-item-content-item"
+                                *ngIf="item.title === 'Front-end'"
+                              >
+                                <img
+                                  [src]="item.css"
+                                  alt="css logo"
+                                  class="image"
+                                />
+                              </div>
+                              <div
+                                class="skills__content-list-item-content-item"
+                                *ngIf="item.title === 'Back-end'"
+                              >
+                                <img
+                                  [src]="item.laravel"
+                                  alt="laravel logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                            <li>
+                              <div
+                                class="skills__content-list-item-content-item"
+                                *ngIf="item.title === 'Front-end'"
+                              >
+                                <img
+                                  [src]="item.js"
+                                  alt="js logo"
+                                  class="image"
+                                />
+                              </div>
+                              <div
+                                class="skills__content-list-item-content-item"
+                                *ngIf="item.title === 'Back-end'"
+                              >
+                                <img
+                                  [src]="item.python"
+                                  alt="python logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                            <li>
+                              <div
+                                class="skills__content-list-item-content-item"
+                                *ngIf="item.title === 'Front-end'"
+                              >
+                                <img
+                                  [src]="item.typescript"
+                                  alt="typescript logo"
+                                  class="image"
+                                />
+                              </div>
+                              <div
+                                class="skills__content-list-item-content-item"
+                                *ngIf="item.title === 'Back-end'"
+                              >
+                                <img
+                                  [src]="item.mysql"
+                                  alt="mysql logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                            <li>
+                              <div
+                                class="skills__content-list-item-content-item"
+                                *ngIf="item.title === 'Front-end'"
+                              >
+                                <img
+                                  [src]="item.angular"
+                                  alt="angular logo"
+                                  class="image"
+                                />
+                              </div>
+                              <div
+                                class="skills__content-list-item-content-item"
+                                *ngIf="item.title === 'Back-end'"
+                              >
+                                <img
+                                  [src]="item.firebase"
+                                  alt="firebase logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                            <li>
+                              <div
+                                class="skills__content-list-item-content-item"
+                                *ngIf="item.title === 'Front-end'"
+                              >
+                                <img
+                                  [src]="item.vue"
+                                  alt="vue logo"
+                                  class="image"
+                                />
+                              </div>
+                              <div
+                                class="skills__content-list-item-content-item"
+                                *ngIf="item.title === 'Back-end'"
+                              >
+                                <img
+                                  [src]="item.node"
+                                  alt="node logo"
+                                  class="image"
+                                />
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </ng-container>
+              </ng-container>
+            </carousel>
+          </section>
+          <section class="skills__content-section">
+            <div class="qualification__content">
+              <div class="qualification_data">
+                <div class="qualification__data-right">
+                  <div class="quialification__data-element">
+                    <h3 class="qualification_title">Freelace</h3>
+                    <span class="qualification_subtitle"
+                      >Creation of web pages</span
+                    >
+                    <div class="qualification_calendar">
+                      <i><img src="../assets/icons/calendar-alt.svg" alt="" /></i>
+                      2019 - Present
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="skills__content-section">
+            <div class="qualification__content">
+              <div class="qualification_data">
+                <div class="qualification__data-right">
+                  <div class="quialification__data-element">
+                    <h3 class="qualification_title">high school</h3>
+                    <span class="qualification_subtitle">Electronic Technician</span>
+                    <div class="qualification_calendar">
+                      <i><img src="../assets/icons/calendar-alt.svg" alt="" /></i>
+                      2011 - 2017
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+              <div class="qualification_data">
+                <div></div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+                <div class="qualification__data-left">
+                  <div class="quialification__data-element">
+                    <h3 class="qualification_title">Codo a Codo</h3>
+                    <span class="qualification_subtitle">Full Stack Java</span>
+                    <div class="qualification_calendar">
+                      <i><img src="../assets/icons/calendar-alt.svg" alt="" /></i>
+                      2017 - 2018
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="qualification_data">
+                <div class="qualification__data-right">
+                  <div class="quialification__data-element">
+                    <h3 class="qualification_title">UTN</h3>
+                    <span class="qualification_subtitle"
+                      >University tenicature in programming</span
+                    >
+                    <div class="qualification_calendar">
+                      <i><img src="../assets/icons/calendar-alt.svg" alt="" /></i>
+                      2018 - Present
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+              <div class="qualification_data">
+                <div></div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+                <div class="qualification__data-left">
+                  <div class="quialification__data-element">
+                    <h3 class="qualification_title">Codo a Codo 4.0</h3>
+                    <span class="qualification_subtitle">Full Stack Python</span>
+                    <div class="qualification_calendar">
+                      <i><img src="../assets/icons/calendar-alt.svg" alt="" /></i>
+                      2021/08 - 2021/12
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+  </section>

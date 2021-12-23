@@ -1,0 +1,51 @@
+@import "/src/styles.scss";
+/* home section styling */
+.home {
+  display: flex;
+  height: 100vh;
+  color: #fff;
+  align-items: center;
+  padding: 0 24px;
+  &__content {
+      transition: padding 0.3s ease-in-out;
+      @include breakpoint-up(medium) {
+        padding: 0 80px;
+      }
+    .text-1 {
+      padding: 5px 0;
+      font-family: $font-weight-Regular;
+      font-size: $h3-font-size;
+    }
+    .text-2 {
+      padding: 5px 0;
+      font-size: $h1-font-size;
+      font-weight: $font-weight-Bold;
+    }
+    .text-3 {
+      font-size: $h3-font-size;
+      font-weight: $font-weight-Regular;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      p {
+        margin-right: 0.3rem;
+      }
+      & span {
+        color: $color-primary;
+        font-weight: $font-weight-Regular;
+        font-size: $h1-font-size;
+      }
+      p,span {
+        margin-top: 0.2rem;
+        padding: 5px 0;
+      }
+    }
+  }
+
+  .home__btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+}

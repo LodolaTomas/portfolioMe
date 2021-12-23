@@ -8,6 +8,9 @@
     "paths": {
       "@image/*": [
         "src/assets/images/*"
+      ],
+      "@scss/*":[
+        "src/assets/scss/*"
       ]
     },
     /* END */

@@ -42,10 +42,10 @@ export class AppComponent {
 
   constructor(private render2: Renderer2, private viewportScroller:ViewportScroller) {}
 
-  ngAfterViewInit() {
+  /* ngAfterViewInit() {
     this.list.toArray()[0].nativeElement.classList.add('active');
     this.listItem.toArray()[0].nativeElement.classList.add('active');
-  }
+  } */
 
   change(i: number,key:string) {
     const elementList = this.list.toArray()[i].nativeElement;

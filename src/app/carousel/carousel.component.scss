@@ -1,0 +1,21 @@
+@import "/src/styles.scss";
+.carousel-wrapper{
+    z-index: -1;
+    .skills__content-list-item-rows {
+        left: 60px;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 34%;
+        height: 33.3333%;
+        width: 50px;
+        z-index: 100;
+        justify-content: space-between;
+        align-items: center;
+        align-content: space-between;
+      }
+    
+      .next {
+        transform: rotate(180deg);
+      }
+}
