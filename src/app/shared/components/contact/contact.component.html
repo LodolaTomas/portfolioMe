@@ -1,0 +1,77 @@
+<section class="contact container" id="contact">
+  <h2 class="section__title">Contact Me</h2>
+  <span class="section__subtitle">Get in touch</span>
+  <div class="contact__container flex">
+    <div class="contact-content-information">
+      <div class="contact__information">
+        <i
+          ><img
+            src="../assets/icons/phone.svg"
+            alt="icono phone"
+            class="contact__icon"
+        /></i>
+        <div>
+          <h3 class="contact__title">Call Me</h3>
+          <a href="tel:+5491122571433" class="contact__subtitle">+54 9 11 2257-1433</a>
+        </div>
+      </div>
+      <div class="contact__information">
+        <i
+          ><img
+            src="../assets/icons/envelope.svg"
+            alt="icono email"
+            class="contact__icon"
+        /></i>
+        <div>
+          <h3 class="contact__title">Email</h3>
+          <a href="mailto:contact@lodolatomas.com.ar?Subject=Aqui%20el%20el%20asunto%20xdd" class="contact__subtitle">contact@lodolatomas.com.ar</a>
+        </div>
+      </div>
+      <div class="contact__information">
+        <i
+          ><img
+            src="../assets/icons/location-point.svg"
+            alt="icono ubicacion"
+            class="contact__icon"
+        /></i>
+        <div>
+          <h3 class="contact__title">Location</h3>
+          <a href="https://goo.gl/maps/whwLeCz7o3z9Ljis9/" target="__blank" class="contact__subtitle">CABA - Argentina</a>
+        </div>
+      </div>
+    </div>
+    <form action="" class="contact__form grid">
+      <div class="contact__inputs grid">
+        <div class="contact__content">
+          <label for="name" class="contact__label">Name</label>
+          <input type="text" class="contact__input" name="name" id="name" />
+        </div>
+        <div class="contact__content">
+          <label for="email" class="contact__label">Email</label>
+          <input type="email" class="contact__input" name="email" id="email" />
+        </div>
+        <div class="contact__content">
+          <label for="message" class="contact__label">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="0"
+            rows="7"
+            class="contact__input resizeNone"
+          ></textarea>
+        </div>
+        <div>
+          <a href="javascript:void(0)" (click)='submit()' class="contact__form-button button--flex">
+            <p>Send Message</p>
+            <i class="button__icon"
+              ><img
+                src="../assets/icons/message.svg"
+                alt=""
+                class="contact__form-icon"
+            /></i>
+          </a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

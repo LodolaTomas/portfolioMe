@@ -11,6 +11,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { HomeComponent } from './shared/components/home/home.component';
 import { AboutComponent } from './shared/components/about/about.component';
 import { SkillsComponent } from './shared/components/skills/skills.component';
+import { ContactComponent } from './shared/components/contact/contact.component';
+import { ProjectsComponent } from './shared/components/projects/projects.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,9 +23,11 @@ import { SkillsComponent } from './shared/components/skills/skills.component';
     HomeComponent,
     AboutComponent,
     SkillsComponent,
+    ContactComponent,
+    ProjectsComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule
   ],

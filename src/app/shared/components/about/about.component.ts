@@ -14,10 +14,10 @@ import { Component, OnInit } from '@angular/core';
       />
     </div>
     <div class="about__column-right">
-      <div class="about__column-right-title">
+      <div class="about__column-right-content">
         <p>
           Hello, my name is Tomás and I'm a
-          <span class="typing">Full Stack Developer</span>
+          <span class="about__column-right-title">Full Stack Developer</span>
         </p>
         <p>
           I started in the world of development when I began my technical degree

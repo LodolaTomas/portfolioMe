@@ -41,6 +41,7 @@ import { CarouselItemDirective } from '../directivas/carousel-item.directive';
             alt="arrow"
             height="30px"
             width="30px"
+            class="prev"
           />
         </a>
         <a href="javascript:void(0)" (click)="next()">

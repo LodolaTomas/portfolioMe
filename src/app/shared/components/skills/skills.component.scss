@@ -76,14 +76,14 @@ section .title::after {
 .skills {
   z-index: -1;
   color: $color-secondary;
-  margin-top: 200px;
-  height: 100vh;
+  padding-top: 200px;
   .skills__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     font-weight: $font-weight-Regular;
     width: 100%;
+    margin-bottom: $mb-3;
     ul {
       font-size: $h1-font-size;
       padding: 0 !important;
@@ -98,7 +98,7 @@ section .title::after {
           color: $color-primary;
         }
         display: inline-block;
-        margin: $mb-1-5;
+        padding: $mb-1;
       }
     }
   }

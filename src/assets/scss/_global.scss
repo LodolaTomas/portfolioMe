@@ -2,7 +2,7 @@
 @import '/src/assets/scss/mixins';
 
 /* FONTS GOOGLE */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
 /* VARIABLES CSS */
 
@@ -29,6 +29,7 @@ $smaller-font-size: 0.75rem;
 /* Font wight */
 $font-weight-Light: 300;
 $font-weight-Regular: 400;
+$font-weight-Medium: 500;
 $font-weight-Bold: 700;
 
 /* Margin bottom */
@@ -113,7 +114,8 @@ a, a:visited, a:hover {
 
 .section__title {
   font-family: $font-weight-Regular;
-  font-size: $very-big-font-size;
+  font-size: $big-font-size;
+  margin-bottom: 0 !important;
 }
 
 .section__subtitle {
@@ -125,19 +127,22 @@ a, a:visited, a:hover {
 
 .section__title,
 .section__subtitle {
+  color: $color-secondary;
   text-align: center;
 }
 
 
 .button {
-  margin: 0.5rem 0;
-  width: 8rem;
+  margin-top: $mb-0-5;
+  margin-bottom: $mb-0-5;
+  margin-right: $mb-0-5;
+  width: 9rem;
   text-align: center;
   padding: 0.6rem 0.8rem;
   border-radius: 50px;
   cursor: pointer;
   border: 0;
-  font-size: 0.875rem;
+  font-size: $h3-font-size;
   color: $color-secondary;
   border:1px solid $color-primary;
   font-weight: $font-weight-Regular;
