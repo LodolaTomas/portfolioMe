@@ -19,7 +19,8 @@ export class SkillsComponent  {
 
   @ViewChildren('listItem')
   public listItem!: QueryList<ElementRef<HTMLLIElement>>;
-  constructor(private render2: Renderer2) { }
+
+  constructor(private render2: Renderer2) {}
 
   ngAfterViewInit() {
     this.listItem.toArray()[0].nativeElement.classList.add('active');

@@ -1,4 +1,4 @@
-<section class="skills container" id="skills">
+<section class="skills" id="skills">
       <div class="skills__carrousel">
         <div class="skills__list">
           <ul>
@@ -16,16 +16,16 @@
         <div #skillContent class="skills__content">
           <section class="myskills__carousel">
             <carousel class="myskills__carousel-big carousel-item">
-              <ng-container *ngFor="let item of items">
+              <ng-container *ngFor="let item of items;index as i">
                 <ng-container *carouselItem>
-                  <section #myskillSections class="skills__content-section1">
+                  <section #myskillSections class="skills__content-section1" data-id="{i}">
                     <div class="skills__content-list-item">
                       <div class="skills__content-list-item-options">
                         <h3>{{ item.title }}</h3>
                         <div class="skills__content-list-item-content">
                           <ul
                             *ngIf="item.title === 'Other-skills'"
-                            class="one-skills"
+                            class="skills__content-list-item-content-list"
                           >
                             <li>
                               <div class="skills__content-list-item-content-item">
@@ -105,7 +105,7 @@
                               item.title === 'Front-end' ||
                               item.title === 'Back-end'
                             "
-                            class="two-skills"
+                            class="skills__content-list-item-content-list"
                           >
                             <li>
                               <div

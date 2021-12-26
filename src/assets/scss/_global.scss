@@ -84,6 +84,31 @@ a, a:visited, a:hover {
 }
 
 
+
+.container {
+  width: 100%;
+  padding-left: $mb-0-5;
+  padding-right: $mb-0-5;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
 /* Reusable css Classes */
 
 .section__title {
@@ -103,10 +128,6 @@ a, a:visited, a:hover {
   text-align: center;
 }
 
-.container{
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
 
 .button {
   margin: 0.5rem 0;
