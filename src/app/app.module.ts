@@ -17,6 +17,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     DragScrollModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPageScrollCoreModule.forRoot({duration: 2500}),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -28,7 +28,9 @@
     "express": "^4.15.2",
     "ngx-drag-scroll": "^12.0.0-beta.2",
     "ngx-page-scroll": "^7.0.6",
+    "ngx-page-scroll-core": "^7.0.6",
     "rxjs": "~6.6.0",
+    "sweetalert2": "^11.3.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

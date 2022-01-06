@@ -1,34 +1,33 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmailService } from 'src/app/services/email.service';
+import { SweetalertService } from 'src/app/services/sweetalert.service';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
-export class ContactComponent{
+export class ContactComponent {
+  constructor(private fb: FormBuilder, private _emailService: EmailService,private _alertService:SweetalertService) {}
 
-  constructor( private fb: FormBuilder, private http : HttpClient) { }
-  
-  userForm: FormGroup = this.fb.group({ 
-    name: ['',Validators.required],
-    email: ['',Validators.required],
-    message: ['',Validators.required]
+  userForm: FormGroup = this.fb.group({
+    name: ['', Validators.required],
+    email: ['', Validators.required],
+    message: ['', Validators.required],
   });
-  onSubmit(){
+  onSubmit() {
     if (this.userForm.valid) {
-      const email = this.userForm.value;
-      const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-      this.http.post('https://formspree.io/f/mdobkydd',
-        { name: email.name, replyto: email.email, message: email.message },
-        { 'headers': headers }).subscribe(
-          response => {
-            console.log(response);
-          }
-        );
-    }else{
-      console.log('form is not valid');
-    }    
+      this._emailService.sendEmail(this.userForm.value).subscribe((data) => {
+        if (data.ok === true) {
+          this.userForm.reset();
+          this._alertService.alert('success','Message sent successfully');
+        } else {
+          this._alertService.alert('error','Message not sent');
+        }
+      });
+    } else {
+      this._alertService.alert('error','Form is invalid');
+    }
   }
 }
