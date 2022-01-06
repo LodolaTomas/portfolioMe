@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-about',
   template: `
-  <section class="about container" id="about">
+  <section class="about" id="about">
   <h2 class="about__title">About me</h2>
   <div class="about__content">
     <div class="about__column-left">

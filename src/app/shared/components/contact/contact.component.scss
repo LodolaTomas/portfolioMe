@@ -52,6 +52,7 @@
   width: 100%;
   background-color: $input-color;
   color: $text-color;
+  font-family: "Ubuntu", sans-serif;
   font-weight: $font-weight-Light;
   font-size: $normal-font-size;
   border: none;
@@ -64,6 +65,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: $background-color;
   color: $color-primary;
   font-family: "Ubuntu-Medium", sans-serif;
   padding: 7px 0;
@@ -72,6 +74,7 @@
   border-radius: 40px;
   border: 2px solid #5271ff;
   transition: all 0.3s ease-out;
+  cursor: pointer;
   &:hover {
     background: $color-primary;
     color: $color-secondary;

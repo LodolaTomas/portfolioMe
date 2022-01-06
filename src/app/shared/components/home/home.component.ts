@@ -3,7 +3,7 @@ import { Component} from '@angular/core';
 @Component({
   selector: 'app-home',
   template: `
-  <section class="home container" id="home">
+  <section class="home" id="home">
     <div class="home__content">
       <div class="text-1">Hello, my name is</div>
       <div class="text-2">Lodola Tomás</div>

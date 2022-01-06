@@ -97,16 +97,19 @@ a, a:visited, a:hover {
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
+    margin: 0 auto !important;
   }
 }
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
+    margin: 0 auto !important;
   }
 }
 @media (min-width: 1400px) {
   .container {
     max-width: 1400px;
+    margin: 0 auto !important;
   }
 }
 

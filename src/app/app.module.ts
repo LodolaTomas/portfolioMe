@@ -13,6 +13,10 @@ import { AboutComponent } from './shared/components/about/about.component';
 import { SkillsComponent } from './shared/components/skills/skills.component';
 import { ContactComponent } from './shared/components/contact/contact.component';
 import { ProjectsComponent } from './shared/components/projects/projects.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { DragScrollModule } from 'ngx-drag-scroll';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,12 +28,16 @@ import { ProjectsComponent } from './shared/components/projects/projects.compone
     AboutComponent,
     SkillsComponent,
     ContactComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DragScrollModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
