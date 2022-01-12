@@ -14,10 +14,10 @@ import { SkillsComponent } from './shared/components/skills/skills.component';
 import { ContactComponent } from './shared/components/contact/contact.component';
 import { ProjectsComponent } from './shared/components/projects/projects.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-import { DragScrollModule } from 'ngx-drag-scroll';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { DragScrollModule } from 'ngx-drag-scroll';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,12 +36,11 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
-    DragScrollModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxPageScrollCoreModule.forRoot({duration: 2500}),
+    NgxPageScrollModule,
+    DragScrollModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

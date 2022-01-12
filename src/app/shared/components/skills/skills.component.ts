@@ -10,7 +10,7 @@ export class SkillsComponent  {
   skillsList: any = ['Skills', 'Experience', 'Education'];
   items = [
     { title: 'Front-end', html: '../assets/images/html_logo.png', css: '../assets/images/css_logo.png', js: '../assets/images/js_logo.png', typescript: '../assets/images/ts_logo.png', angular:  '../assets/images/angular_logo.png', vue: '../assets/images/vue_logo.png' },
-    { title: 'Back-end', php: '../assets/images/php_logo.png', laravel: '../assets/images/laravel_logo.png', python: '../assets/images/python_logo.png', node: '../assets/images/node_logo.png', mysql: '../assets/images/mysql_logo.png', firebase: '../assets/images/firebase_logo.png' },
+    { title: 'Back-end', java: '../assets/images/java_logo.png', laravel: '../assets/images/laravel_logo.png', python: '../assets/images/python_logo.png', node: '../assets/images/node_logo.png', mysql: '../assets/images/mysql_logo.png', firebase: '../assets/images/firebase_logo.png' },
     { title: 'Other-skills', bootstrap: '../assets/images/bootstrap_logo.png',docker:'../assets/images/docker_logo.png',linux:'../assets/images/linux_logo.png', git: '../assets/images/git_logo.png',ionic:'../assets/images/ionic_logo.png',ngrx:'../assets/images/ngrx_logo.svg',sass:'../assets/images/sass_logo.png', adobexd:'../assets/images/adobexd_logo.png' },
   ];
 

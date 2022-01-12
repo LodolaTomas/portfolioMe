@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -34,8 +34,8 @@ import { Component, OnInit } from '@angular/core';
           every day.
         </p>
         <div class="about__btns">
-          <a href="#" class="button">Hire me</a>
-          <a href="#" class="button">Get Resume</a>
+          <a pageScroll [pageScrollDuration]="500" href="#contact" class="button">Hire me</a>
+          <a target="_blank" href="../../../../assets/cv-tomas-lodola.pdf" download rel="noopener noreferr" class="button">Get Resume</a>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 @import "/src/styles.scss";
 .contact {
-  margin-top: 200px;
+  padding-top: 150px;
+  margin: .5rem;
 }
 .contact__container {
   font-weight: $font-weight-Regular;
@@ -12,7 +13,7 @@
     margin-bottom: $mb-2;
     align-items: center;
     @include breakpoint-down(large) {
-        justify-content: center;
+        justify-content: left;
       }
   }
 }

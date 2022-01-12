@@ -1,5 +1,3 @@
-import { AnimationBuilder } from '@angular/animations';
-import { ViewportScroller } from '@angular/common';
 import {
   Component,
   ElementRef,
@@ -8,7 +6,6 @@ import {
   ViewChild,
   ViewChildren,
 } from '@angular/core';
-
 @Component({
   selector: 'app-header',
   template: `
@@ -28,17 +25,27 @@ import {
         </div>
         <div class="header__links hide-for-mobile">
           <ng-container *ngFor="let key of objectKeys(navlist); index as i">
-            <a #asList pageScroll (click)="change(i, key)" href="#{{ key }}">{{
-              navlist[key]
-            }}</a>
+            <a
+              #asList
+              pageScroll
+              [pageScrollDuration]="500"
+              (click)="change(i)"
+              href="#{{ key }}"
+              >{{ navlist[key] }}</a
+            >
           </ng-container>
         </div>
       </nav>
       <div #headerMenu class="header__menu display-none">
         <ng-container *ngFor="let key of objectKeys(navlist); index as i">
-          <a #asList (click)="change(i, key)" href="#{{ key }}">{{
-            navlist[key]
-          }}</a>
+          <a
+            #asList
+            pageScroll
+            [pageScrollDuration]="500"
+            (click)="change(i)"
+            href="#{{ key }}"
+            >{{ navlist[key] }}</a
+          >
         </ng-container>
       </div>
     </header>
@@ -55,11 +62,7 @@ export class HeaderComponent {
   @ViewChild('headerMenu')
   public headerMenu!: ElementRef;
 
-  constructor(
-    private render2: Renderer2,
-    private viewportScroller: ViewportScroller,
-    private builder: AnimationBuilder
-  ) {}
+  constructor(private render2: Renderer2) {}
 
   objectKeys = Object.keys;
   navlist: any = {
@@ -70,28 +73,14 @@ export class HeaderComponent {
     contact: 'ContactMe',
   };
 
-  change(i: number, key: string) {
+  change(i: number) {
     const elementList = this.list.toArray()[i].nativeElement;
     this.list.forEach((element) => {
       this.render2.removeClass(element.nativeElement, 'active');
     });
     this.render2.addClass(elementList, 'active');
-    if (key === 'home') {
-      this.viewportScroller.scrollToAnchor(key);
-      // que pasa si pongo el menu open aca?
-    }
-    if (key === 'about') {
-      this.viewportScroller.scrollToAnchor(key);
-    }
-    if (key === 'skills') {
-      this.viewportScroller.scrollToAnchor(key);
-    }
-    if (key === 'projects') {
-      this.viewportScroller.scrollToAnchor(key);
-    }
-    if (key === 'contact') {
-      this.viewportScroller.scrollToAnchor(key);
-    }
+    this.render2.removeClass(this.hamburger.nativeElement, 'menu-open');
+    this.render2.addClass(this.headerMenu.nativeElement, 'display-none');
   }
 
   openMenu() {

@@ -1,1 +1,33 @@
-<p>projects works!</p>
+<section class="projects container" id="projects">
+    <h2 class="projects__title">Projects</h2>
+    <div #holdDrag>
+        <img src="../../../../assets/images/hold-drag.png" alt="hold and drag" class="img-hold">
+    </div>
+    <drag-scroll [scrollbar-hidden]="true" #drag >
+        <div drag-scroll-item class="projects__card" (click)="redirecTo('clinica')">
+            <img src="../../../../assets/images/medicalClinic.svg" alt="">
+            <p>Web development</p>
+            <h3>Project Clinic</h3>
+        </div>
+        <div drag-scroll-item class="projects__card" (click)="redirecTo('estudioContable')">
+            <img src="../../../../assets/images/estudioContable.svg" alt="">
+            <p>Freelance Web development</p>
+            <h3>Estudio Contable</h3>
+        </div>
+        <div drag-scroll-item class="projects__card" (click)="redirecTo('repairService')">
+            <img src="../../../../assets/images/repairService.svg" alt="">
+            <p>Web development</p>
+            <h3>Repair Service</h3>
+        </div>
+        <div drag-scroll-item class="projects__card" (click)="redirecTo('restaurant')">
+            <img src="../../../../assets/images/restaurantQR.svg" alt="">
+            <p>Web Application</p>
+            <h3>Restaurant QR</h3>
+        </div>
+        <div drag-scroll-item class="projects__card" (click)="redirecTo('pacoRabanne')">
+            <img src="../../../../assets/images/pacoRabanne.svg" alt="">
+            <p>Web development</p>
+            <h3>Paco Rabanne</h3>
+        </div>
+      </drag-scroll>
+</section>
