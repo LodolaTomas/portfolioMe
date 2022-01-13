@@ -10,8 +10,8 @@ export class ProjectsComponent{
   @ViewChild('drag', { read: DragScrollComponent }) 
   private ds!: DragScrollComponent;
 
-  @ViewChild('holdDrag')
-  private holdDrag!: ElementRef;
+  /* @ViewChild('holdDrag')
+  private holdDrag!: ElementRef; */
 
   constructor(private render2: Renderer2) {}
 
@@ -31,8 +31,8 @@ export class ProjectsComponent{
       );
     }
   }
-  @HostListener('document:mousedown', ['$event'])
+  /* @HostListener('document:mousedown', ['$event'])
     onPointerMove(event: PointerEvent): void {
       this.ds.isPressed==true ? this.render2.addClass(this.holdDrag.nativeElement, 'display-none') :'' ;
-    }
+    } */
 }

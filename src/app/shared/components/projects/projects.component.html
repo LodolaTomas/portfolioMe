@@ -1,9 +1,6 @@
 <section class="projects container" id="projects">
     <h2 class="projects__title">Projects</h2>
-    <div #holdDrag>
-        <img src="../../../../assets/images/hold-drag.png" alt="hold and drag" class="img-hold">
-    </div>
-    <drag-scroll [scrollbar-hidden]="true" #drag >
+    <drag-scroll #drag >
         <div drag-scroll-item class="projects__card" (click)="redirecTo('clinica')">
             <img src="../../../../assets/images/medicalClinic.svg" alt="">
             <p>Web development</p>
