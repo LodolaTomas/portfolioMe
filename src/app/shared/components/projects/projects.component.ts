@@ -1,4 +1,13 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnChanges, OnInit, Renderer2, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+  OnChanges,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 
 @Component({
@@ -6,8 +15,8 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
-export class ProjectsComponent{
-  @ViewChild('drag', { read: DragScrollComponent }) 
+export class ProjectsComponent {
+  @ViewChild('drag', { read: DragScrollComponent })
   private ds!: DragScrollComponent;
 
   /* @ViewChild('holdDrag')
@@ -22,7 +31,9 @@ export class ProjectsComponent{
       window.open('https://github.com/LodolaTomas/estudioContable', '_blank');
     } else if (value === 'pacoRabanne') {
       window.open('https://competent-kirch-832668.netlify.app/', '_blank');
-    } else if (value === 'repairService') {
+    } else if (value === 'rickandmorty') {
+      window.open('http://rickandmortygraphql.lodolatomas.com.ar/', '_blank');
+    }else if (value === 'repairService') {
       window.open('https://github.com/LodolaTomas/RepairService', '_blank');
     } else if (value === 'restaurant') {
       window.open(

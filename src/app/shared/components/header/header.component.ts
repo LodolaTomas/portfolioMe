@@ -11,9 +11,9 @@ import {
   template: `
     <header class="header">
       <nav class="container flex flex-jc-sb flex-ai-c" id="navbar">
-        <div class="header__logo">
+        <a href="#home" class="header__logo">
           <p>Portfo<span>lio.</span></p>
-        </div>
+        </a>
         <div
           #hamburger
           class="header__burger hide-for-desktop"
@@ -27,10 +27,8 @@ import {
           <ng-container *ngFor="let key of objectKeys(navlist); index as i">
             <a
               #asList
-              pageScroll
-              [pageScrollDuration]="500"
               (click)="change(i)"
-              href="#{{ key }}"
+              href="#{{key}}"
               >{{ navlist[key] }}</a
             >
           </ng-container>
@@ -40,8 +38,6 @@ import {
         <ng-container *ngFor="let key of objectKeys(navlist); index as i">
           <a
             #asList
-            pageScroll
-            [pageScrollDuration]="500"
             (click)="change(i)"
             href="#{{ key }}"
             >{{ navlist[key] }}</a
@@ -62,7 +58,7 @@ export class HeaderComponent {
   @ViewChild('headerMenu')
   public headerMenu!: ElementRef;
 
-  constructor(private render2: Renderer2) {}
+  constructor(private render2: Renderer2) { }
 
   objectKeys = Object.keys;
   navlist: any = {
